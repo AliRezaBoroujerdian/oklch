@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./theme/palette/light.css";
+@import "./theme/palette/dark.css";
+
+html {
+
+    --hue: 320;
+
+    --swatch-1: oklch(99% .05 var(--hue));
+    --swatch-2: oklch(90% .1 var(--hue));
+    --swatch-3: oklch(80% .2 var(--hue));
+    --swatch-4: oklch(72% .25 var(--hue));
+    --swatch-5: oklch(67% .31 var(--hue));
+    --swatch-6: oklch(50% .27 var(--hue));
+    --swatch-7: oklch(35% .25 var(--hue));
+    --swatch-8: oklch(25% .2 var(--hue));
+    --swatch-9: oklch(13% .2 var(--hue));
+    --swatch-10: oklch(5% .2 var(--hue));
+
+    --color-primary: var(--swatch-10);
+    --color-secondary: var(--swatch-9);
+
+    --color-base-primary: var(--swatch-1);
+    --color-base-secondary: var(--swatch-2);
+    --color-base-teritary: var(--swatch-3);
+}
+
+
+body {
+    background-color: var(--color-base-primary);
+    color: var(--color-primary);
+}
+
+.error {
+    /* Red version of accent color */
+    background: oklch(from var(--color-base-teritary) l c 15);
+}
+.button:hover {
+    /* 10% lighter version */
+    background: oklch(from var(--color-secondary) calc(l + 15) c h);
+}
