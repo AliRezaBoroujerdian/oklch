@@ -114,7 +114,9 @@ export default function Home() {
                 <a href="https://boroujerdian.com/">Boroujerdian</a>
               </p>
               <p className="text-xs leading-5 text-secondary">
-                <a href="https://tamtaam.com/">Github</a>
+                <a href="https://github.com/AliRezaBoroujerdian/oklch">
+                  Github
+                </a>
               </p>
             </div>
           </div>
